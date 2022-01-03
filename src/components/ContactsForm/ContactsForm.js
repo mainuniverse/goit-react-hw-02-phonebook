@@ -43,9 +43,9 @@ class ContactsForm extends Component {
     const { name, number } = this.state;
 
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label htmlFor={this.nameInputId}>
-          Name
+      <form onSubmit={this.handleSubmit} className={s.form}>
+        <label htmlFor={this.nameInputId} >
+         <p className={s.formName}>Name </p> 
           <input
             type="text"
             name="name"
@@ -57,8 +57,8 @@ class ContactsForm extends Component {
             id={this.nameInputId}
           />
         </label>
-        <label htmlFor={this.numberInputId}>
-          Number
+        <label htmlFor={this.numberInputId} >
+          <p className={s.formNumber}> Number</p>
           <input
             type="tel"
             name="number"
